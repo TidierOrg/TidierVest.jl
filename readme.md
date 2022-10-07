@@ -1,5 +1,5 @@
 # Harbest.jl
-## The best way to scrape the internet
+## The best way to scrape the internet, if you're lazy
 This library combines HTTP, Gumbo and Cascadia for a more simple way to scrape data. 
 
 Early version. Based on rvest from R.
@@ -22,19 +22,19 @@ Parse the text
 
 Parse the text but cleaner
 
-### `html_text2`
+### `html_text3`
 
-Parse the text but cleaner and even without line breaks.
+Parse the text but cleaner and even without line breaks
 
 ### `html_attrs`
 
-Get a specific attribute, if string not provided it would try to get the attributes that there are.
+Get a specific attribute, if string not provided it would try to get some attributes anyway
 
 ## Next functions
 
 ### `html_table`
 
-Create a table based on a html structure
+Create a table based on the html structure
 
 ## To do
 - Improve html_elements to receive multiple strings and apply it in sequence.
