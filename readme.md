@@ -33,6 +33,6 @@ Get the attribute, very uesful to get href of src.
 Create a table based on a html structure
 
 ## To do
-- Improve html_elements to recieve multiple strings and apply it in sequence.
-- Make more tests and support Html
+- Improve html_elements to receive multiple strings and apply it in sequence.
+- Make more tests and support all HTML types within Julia
 
