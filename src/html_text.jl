@@ -55,7 +55,6 @@ function cleantext(vectortext)
         end
     end
 
-    finaltext
     breakline = []
     for k in eachindex(finaltext)
         test = finaltext[k]
@@ -67,7 +66,6 @@ function cleantext(vectortext)
                 end
             end
     end
-    breakline
 
     ftext = []
     for i in eachindex(finaltext)

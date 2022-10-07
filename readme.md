@@ -1,6 +1,6 @@
 # Harbest.jl
 ## The best way to scrape the internet
-This library combines HTTP, Gumbo and Cascadia for a more simpler way to scrape information. 
+This library combines HTTP, Gumbo and Cascadia for a more simple way to scrape data. 
 
 Early version. Based on rvest from R.
 
@@ -26,7 +26,7 @@ Parse the text but cleaner
 
 ### `html_attr`
 
-Get the attribute, very uesful to get href of src.
+Get the attribute, uesful to get href, src, etc.
 
 ### `html_table`
 
