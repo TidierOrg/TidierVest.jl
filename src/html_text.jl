@@ -90,3 +90,17 @@ function html_text2(html::HTMLElement{:section})
     text = cleantext(text)
     return text
 end
+
+function html_text3(html::Vector{HTMLNode})
+    html = repr.(html)
+    text = get_text.(html)
+    text = cleantext.(text)
+    return replace.(text, '\n' => "")
+end
+
+function html_text3(html::HTMLElement{:section})
+    html = repr(html)
+    text = get_text(html)
+    text = cleantext(text)
+    return replace(text, '\n' => "")
+end

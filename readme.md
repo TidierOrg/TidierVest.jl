@@ -22,11 +22,15 @@ Parse the text
 
 Parse the text but cleaner
 
+### `html_text2`
+
+Parse the text but cleaner and even without line breaks.
+
+### `html_attrs`
+
+Get a specific attribute, if string not provided it would try to get the attributes that there are.
+
 ## Next functions
-
-### `html_attr`
-
-Get the attribute, uesful to get href, src, etc.
 
 ### `html_table`
 
