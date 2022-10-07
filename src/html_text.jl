@@ -25,7 +25,7 @@ function get_text(htmlstring)
     ## return reduce(string,text)
 end
 
-function html_text(html::HTMLElement{:section})
+function html_text(html::HTMLElement)
     html = repr(html)
     text = get_text(html)
     text = reduce(string,text)
@@ -72,8 +72,12 @@ function cleantext(vectortext)
         text = finaltext[i]
         ftext = vcat(ftext, text[breakline[i]:length(text)])
     end
-
-    return reduce(string, ftext)
+    
+    if ftext == [] 
+        return ""
+    else   
+        return reduce(string, ftext)
+    end
 
 end
 
@@ -84,7 +88,7 @@ function html_text2(html::Vector{HTMLNode})
     return text
 end
 
-function html_text2(html::HTMLElement{:section})
+function html_text2(html::HTMLElement)
     html = repr(html)
     text = get_text(html)
     text = cleantext(text)
@@ -98,7 +102,7 @@ function html_text3(html::Vector{HTMLNode})
     return replace.(text, '\n' => "")
 end
 
-function html_text3(html::HTMLElement{:section})
+function html_text3(html::HTMLElement)
     html = repr(html)
     text = get_text(html)
     text = cleantext(text)

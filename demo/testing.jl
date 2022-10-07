@@ -1,12 +1,11 @@
+include("../src/html_text.jl")
+include("../src/functions.jl")
 
-
-url = "https://rvest.tidyverse.org/articles/starwars.html"
+url = "https://catalogoplantas.udec.cl/?q=node/500"
 
 html = read_html(url)
 
-sections = html_elements(html, "section")
-titles = html_elements(sections, "h2")
-text = html_text2(titles)
+a = html_elements(html, "a")
 
-html_attrs(titles)
-html_attrs(titles,"data-id")
+
+html_text2(a)
