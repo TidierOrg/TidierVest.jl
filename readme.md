@@ -30,9 +30,30 @@ Create a table based on the html structure
 
 ### `html_tree`
 
-Still not sure, but I want something that returns the structure so it's easier to navigate the html
+Returns the structure, so it's easier to navigate the html
 
 ## To do
 - Improve html_elements to receive multiple strings and apply it in sequence.
 - Make more tests and support all HTML types within Julia
 
+## Notes
+
+- If you don't have a terrible internet connection and you are going to use for loops in the same domain, you should set up a timer.
+
+## Usage
+
+```julia
+starwars = read_html("https://rvest.tidyverse.org/articles/starwars.html")
+
+films = html_elements(starwars, "section")
+
+title = html_elements(films,"h2")
+html_text3(title)
+# 7-element Vector{String}:
+#  "The Phantom Menace"
+#  "Attack of the Clones"
+#  "Revenge of the Sith"
+#  ⋮
+#  "Return of the Jedi"
+#  "The Force Awakens"
+```

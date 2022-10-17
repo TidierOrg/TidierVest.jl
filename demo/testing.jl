@@ -1,11 +1,16 @@
 include("../src/html_text.jl")
 include("../src/functions.jl")
 
-url = "https://catalogoplantas.udec.cl/?q=node/500"
+starwars = read_html("https://rvest.tidyverse.org/articles/starwars.html")
 
-html = read_html(url)
+films = html_elements(starwars, "section")
 
-a = html_elements(html, "a")
-
-
-html_text2(a)
+title = html_elements(films,"h2")
+html_text3(title)
+# 7-element Vector{String}:
+#  "The Phantom Menace"
+#  "Attack of the Clones"
+#  "Revenge of the Sith"
+#  ⋮
+#  "Return of the Jedi"
+#  "The Force Awakens"
