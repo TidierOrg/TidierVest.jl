@@ -32,14 +32,6 @@ Create a table based on the html structure
 
 Returns the structure, so it's easier to navigate the html
 
-## To do
-- Improve html_elements to receive multiple strings and apply it in sequence.
-- Make more tests and support all HTML types within Julia
-
-## Notes
-
-- If you don't have a terrible internet connection and you are going to use for loops in the same domain, you should set up a timer.
-
 ## Usage
 
 ```julia
@@ -57,3 +49,11 @@ html_text3(title)
 #  "Return of the Jedi"
 #  "The Force Awakens"
 ```
+
+## To do
+- Improve html_elements to receive multiple strings and apply it in sequence.
+- Make more tests and support all HTML types within Julia
+
+## Notes
+
+  - If you don't have a terrible internet connection and you are going to use for loops in the same domain, you should set up a timer, otherweise you might accidentally DDoS a nice webiste, be polite!
