@@ -34,7 +34,7 @@ Create a table based on the html structure
 
 ### `html_tree`
 
-Returns the structure, so it's easier to navigate the html
+Returns the structure, so it's easier to navigate the html. Will have to add AbstractTrees.jl
 
 ## Usage
 

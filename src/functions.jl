@@ -1,12 +1,13 @@
 using HTTP, Cascadia, Gumbo
+include("../src/html_text.jl")
 
 function read_html(url::String)
     r = HTTP.get(url)
     return parsehtml(String(r.body))
 end
 
-function html_elements(h::HTMLDocument,string::String)
-    elements = eachmatch(Selector(string),h.root)
+function html_elements(html::HTMLDocument,string::String)
+    elements = eachmatch(Selector(string),html.root)
     return elements
 end
 
