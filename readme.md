@@ -20,9 +20,13 @@ Get the text, you can also use `html_text2` or `html_text3` for cleaner text
 
 ### `html_attrs`
 
-Get a specific attribute, if string not provided it would try to get some attributes anyway
+Get the content of an attribute, if string not provided it would try to get you an attribute
 
 ## Next functions
+
+### `html_recipe`
+
+Do you see many similar pieces of texts that you'd like to get? this will give you the elements and attributes necessary to get there
 
 ### `html_table`
 
@@ -56,4 +60,4 @@ html_text3(title)
 
 ## Notes
 
-  - If you don't have a terrible internet connection and you are going to use for loops in the same domain, you should set up a timer, otherweise you might accidentally DDoS a nice webiste, be polite!
+- If you don't have a terrible internet connection and you are going to use for loops in the same domain, you should set up a timer, otherweise you might accidentally DDoS a nice webiste, be polite!
