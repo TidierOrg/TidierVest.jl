@@ -27,9 +27,6 @@ function html_elements(html::Vector{HTMLNode},string::String)
     return reduce(vcat,elements) ## will solve the Vector of Vectors problem
 end
 
-## 6 methods, nice sugar code!
-## If string not provided, it will just return the attributs.
-## Return attributes
 """
 Get an attribute. If string not provided, it will try to return some key
 """
@@ -45,8 +42,6 @@ function html_attrs(html::HTMLElement)
     return attrs(html)
 end
 
-
-## With string
 function html_attrs(html::HTMLDocument,string::String)
     return getattr(html.root,string)
 end
