@@ -1,5 +1,4 @@
-include("../src/html_text.jl")
-include("../src/functions.jl")
+include("../src/harbest.jl")
 
 starwars = read_html("https://rvest.tidyverse.org/articles/starwars.html")
 
