@@ -25,15 +25,11 @@ function get_text(htmlstring)
     ## return reduce(string,text)
 end
 
+"""
+Returns the text of an HTML
+"""
 function html_text(html::HTMLDocument)
     html = repr(html.root)
-    text = get_text(html)
-    text = reduce(string,text)
-    return text
-end
-
-function html_text(html::HTMLElement)
-    html = repr(html)
     text = get_text(html)
     text = reduce(string,text)
     return text
@@ -43,6 +39,13 @@ function html_text(html::Vector{HTMLNode})
     html = repr.(html)
     text = get_text.(html)
     text = reduce.(string,text)
+    return text
+end
+
+function html_text(html::HTMLElement)
+    html = repr(html)
+    text = get_text(html)
+    text = reduce(string,text)
     return text
 end
 
@@ -87,6 +90,15 @@ function cleantext(vectortext)
     end
 
 end
+"""
+Returns the text of an HTML, but cleaner
+"""
+function html_text2(html::HTMLDocument)
+    html = repr(html.root)
+    text = get_text(html)
+    text = cleantext(text)
+    return text
+end
 
 function html_text2(html::Vector{HTMLNode})
     html = repr.(html)
@@ -102,13 +114,10 @@ function html_text2(html::HTMLElement)
     return text
 end
 
-function html_text2(html::HTMLDocument)
-    html = repr(html.root)
-    text = get_text(html)
-    text = cleantext(text)
-    return text
-end
 
+"""
+Returns the text of an HTML, but even cleaner
+"""
 function html_text3(html::Vector{HTMLNode})
     html = repr.(html)
     text = get_text.(html)
