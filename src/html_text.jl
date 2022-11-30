@@ -1,5 +1,3 @@
-using HTTP, Cascadia, Gumbo
-
 function get_text(htmlstring)
     test = htmlstring
     vector = []

@@ -1,1 +1,8 @@
+module Harbest
+using HTTP, Cascadia, Gumbo
+
+export read_html, html_elements, html_attrs
+export html_text, html_text2, html_text3
+
 include("../src/functions.jl")
+end

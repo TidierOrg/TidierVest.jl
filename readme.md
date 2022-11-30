@@ -56,7 +56,6 @@ html_text3(title)
 
 ## To do
 - Improve html_elements to receive multiple strings and apply it in sequence.
-- Make more tests and support all HTML types within Julia
 
 ## Notes
 

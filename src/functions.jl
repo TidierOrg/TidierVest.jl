@@ -1,4 +1,3 @@
-using HTTP, Cascadia, Gumbo
 include("../src/html_text.jl")
 
 """
