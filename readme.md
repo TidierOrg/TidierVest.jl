@@ -1,5 +1,5 @@
 # Harbest.jl
-## The best way to scrape the internet, if you're lazy
+## Simple web scraping with Julia
 This library combines HTTP, Gumbo and Cascadia for a more simple way to scrape data. 
 
 Early version. Based on rvest from R.
@@ -22,7 +22,7 @@ Get the text, you can also use `html_text2` or `html_text3` for cleaner text
 
 Get the content of an attribute, if string not provided it would try to get you an attribute
 
-## Next functions
+## Next functions (In development)
 
 ### `html_recipe`
 
