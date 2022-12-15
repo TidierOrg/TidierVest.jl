@@ -1,7 +1,7 @@
 name = "Harbest"
 uuid = "990b6f6f-09ff-40b6-905e-45355b1e72ab"
 authors = ["jdiaz97 <josediazrrnn@gmail.com>"]
-version = "0.1.2"
+version = "0.1.3"
 
 [deps]
 Cascadia = "54eefc05-d75b-58de-a785-1a3403f0919f"
