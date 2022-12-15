@@ -1,4 +1,4 @@
-include("../src/html_text.jl")
+include("html_text.jl")
 
 """
 Returns a parsed HTML from an url
