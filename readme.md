@@ -39,6 +39,8 @@ Returns the structure, so it's easier to navigate the html. Will have to add Abs
 ## Usage
 
 ```julia
+using Harbest
+
 starwars = read_html("https://rvest.tidyverse.org/articles/starwars.html")
 
 films = html_elements(starwars, "section")
