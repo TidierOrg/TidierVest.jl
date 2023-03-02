@@ -9,6 +9,14 @@ function read_html(url::String)
 end
 
 """
+Returns a parsed JSON from an url
+"""
+function read_json(jsonurl::String)
+    r::HTTP.Messages.Response  = HTTP.get(jsonurl)
+    return JSON.parse(String(r.body))
+end
+
+"""
 Returns HTML elements
 """
 function html_elements(html::HTMLDocument,string::String)
