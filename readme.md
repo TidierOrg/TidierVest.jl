@@ -10,6 +10,10 @@ Early version. Based on rvest from R.
 
 Read an url
 
+### `read_json`
+
+Return a parsed json from an URL
+
 ### `html_elements`
 
 Get the elements you want from an html
