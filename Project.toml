@@ -1,13 +1,12 @@
 name = "Harbest"
 uuid = "88b9f9d1-ecd7-45aa-9934-346af437630c"
 authors = ["jdiaz97 <josediazrrnn@gmail.com>"]
-version = "0.3.0"
+version = "0.2.0"
 
 [deps]
 Cascadia = "54eefc05-d75b-58de-a785-1a3403f0919f"
 Gumbo = "708ec375-b3d6-5a57-a7ce-8257bf98657a"
 HTTP = "cd3eb016-35fb-5094-929b-558a96fad6f3"
-JSON = "682c06a0-de6a-54ab-a142-c8b1cf79cde6"
 
 [compat]
 Cascadia = "1.0"
