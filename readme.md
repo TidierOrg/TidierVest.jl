@@ -10,10 +10,6 @@ Early version. Based on rvest from R.
 
 Read an url
 
-### `read_json`
-
-Return a parsed json from an URL
-
 ### `html_elements`
 
 Get the elements you want from an html
@@ -25,20 +21,6 @@ Get the text, you can also use `html_text2` or `html_text3` for cleaner text
 ### `html_attrs`
 
 Get the content of an attribute, if string not provided it would try to get you an attribute
-
-## Next functions (In development)
-
-### `html_recipe`
-
-Do you see many similar pieces of texts that you'd like to get? this will give you the elements and attributes necessary to get there
-
-### `html_table`
-
-Create a table based on the html structure
-
-### `html_tree`
-
-Returns the structure, so it's easier to navigate the html. Will have to add AbstractTrees.jl
 
 ## Usage
 
@@ -59,9 +41,6 @@ html_text3(title)
 #  "Return of the Jedi"
 #  "The Force Awakens"
 ```
-
-## To do
-- Improve html_elements to receive multiple strings and apply it in sequence.
 
 ## Notes
 
