@@ -8,13 +8,6 @@ function read_html(url::String)
     return parsehtml(String(r.body))
 end
 
-"""
-Returns a parsed JSON from an url
-"""
-function read_json(jsonurl::String)
-    r::HTTP.Messages.Response  = HTTP.get(jsonurl)
-    return JSON.parse(String(r.body))
-end
 
 """
 Returns HTML elements
@@ -32,6 +25,30 @@ end
 function html_elements(html::Vector{HTMLNode},string::String)
     elements = eachmatch.([Selector(string)],html)
     return reduce(vcat,elements) ## will solve the Vector of Vectors problem
+end
+
+function html_elements(html::HTMLDocument,strings::Vector{String})
+    result = html
+    for string in strings
+        result = html_elements(result,string)
+    end
+    return result
+end
+
+function html_elements(html::HTMLElement,strings::Vector{String})
+    result = html
+    for string in strings
+        result = html_elements(result,string)
+    end
+    return result
+end
+
+function html_elements(html::Vector{HTMLNode},strings::Vector{String})
+    result = html
+    for string in strings
+        result = html_elements(result,string)
+    end
+    return result
 end
 
 """

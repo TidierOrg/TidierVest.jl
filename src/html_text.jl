@@ -120,19 +120,19 @@ function html_text3(html::Vector{HTMLNode})
     html = repr.(html)
     text = get_text.(html)
     text = cleantext.(text)
-    return replace.(text, '\n' => "")
+    return replace.(text, '\n' => "") .|> lstrip .|> rstrip .|> string
 end
 
 function html_text3(html::HTMLElement)
     html = repr(html)
     text = get_text(html)
     text = cleantext(text)
-    return replace(text, '\n' => "")
+    return replace(text, '\n' => "") |> lstrip |> rstrip |> string
 end
 
 function html_text3(html::HTMLDocument)
     html = repr(html.root)
     text = get_text(html)
     text = cleantext(text)
-    return replace(text, '\n' => "")
+    return replace(text, '\n' => "") |> lstrip |> rstrip |> string
 end
