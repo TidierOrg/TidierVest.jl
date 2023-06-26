@@ -5,8 +5,7 @@ makedocs(
     authors = "José Díaz",
     pages = [
         "Home" => "index.md",
-        "Functions" => "lib/functions.md",
-        "Tutorial" => "lib/tutorial.md",
+        "Docstrings" => "lib/docstrings.md"
     ]
 )
  
