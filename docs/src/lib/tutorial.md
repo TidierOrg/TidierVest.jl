@@ -67,12 +67,12 @@ function plot_df(df,title)
 end
 ```
 
-```julia
+```@example tutorial
 community_df = get_df("https://www.imdb.com/title/tt1439629/")
 plot_df(community_df,"Community")
 ```
 
-```julia
+```@example tutorial
 bojack_df = get_df("https://www.imdb.com/title/tt3398228/")
 plot_df(bojack_df,"Community")
 ```
