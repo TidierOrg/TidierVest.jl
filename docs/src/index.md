@@ -1,6 +1,6 @@
 # Harbest.jl
 
-Web Scraping is a technique to get data from the internet. In this package you can do this to get data from an static HTML.
+Web Scraping is a technique to get data from the internet. In this package you can do this to get data from a static HTML.
 
 This is a port form [tidyverse/Rvest](https://github.com/tidyverse/rvest)
 
