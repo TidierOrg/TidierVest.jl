@@ -73,6 +73,6 @@ plot_df(community_df,"Community")
 ```
 
 ```@example tutorial
-pokemon_df = get_df("https://www.imdb.com/title/tt0168366/")
-plot_df(pokemon_df,"Bojack Horseman")
+bojack_df = get_df("https://www.imdb.com/title/tt3398228/")
+plot_df(bojack_df,"Community")
 ```
