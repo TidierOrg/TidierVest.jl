@@ -4,11 +4,9 @@ makedocs(
     sitename = "Harbest.jl",
     authors = "José Díaz",
     pages = [
-        "Home" => Any[
-            "Web Scraping" => "index.md",
-            "Functions" => "functions.md",
-        ],
-        "Tutorial" => "tutorial.md"
+        "Home" => "index.md",
+        "Functions" => "lib/functions.md",
+        "Tutorial" => "lib/tutorial.md",
     ]
 )
  
