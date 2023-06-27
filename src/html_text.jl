@@ -1,3 +1,23 @@
+"""
+Returns the text of an HTML.
+
+If you want/need whitespaces and other things, you can use html_text2 or html_text2
+"""
+function html_text3(html::HTMLDocument)
+    text = nodeText(html.root)
+    return replace(text, '\n' => "")
+end
+
+function html_text3(html::HTMLElement)
+    text = nodeText(html)
+    return replace(text, '\n' => "")
+end
+
+function html_text3(html::Vector{HTMLNode})
+    text = nodeText.(html)
+    return replace.(text, '\n' => "")
+end
+
 function get_text(htmlstring)
     test = htmlstring
     vector = []
@@ -24,7 +44,7 @@ function get_text(htmlstring)
 end
 
 """
-Returns the text of an HTML
+Returns the text of an HTML but with some whitespaces
 """
 function html_text(html::HTMLDocument)
     html = repr(html.root)
@@ -89,7 +109,7 @@ function cleantext(vectortext)
 
 end
 """
-Returns the text of an HTML, but cleaner
+Returns the text of an HTML, but cleaner than html_text
 """
 function html_text2(html::HTMLDocument)
     html = repr(html.root)
@@ -111,28 +131,4 @@ function html_text2(html::HTMLElement)
     text = cleantext(text)
     return text
 end
-
-
-"""
-Returns the text of an HTML, but even cleaner
-"""
-function html_text3(html::Vector{HTMLNode})
-    html = repr.(html)
-    text = get_text.(html)
-    text = cleantext.(text)
-    return replace.(text, '\n' => "") .|> lstrip .|> rstrip .|> string
-end
-
-function html_text3(html::HTMLElement)
-    html = repr(html)
-    text = get_text(html)
-    text = cleantext(text)
-    return replace(text, '\n' => "") |> lstrip |> rstrip |> string
-end
-
-function html_text3(html::HTMLDocument)
-    html = repr(html.root)
-    text = get_text(html)
-    text = cleantext(text)
-    return replace(text, '\n' => "") |> lstrip |> rstrip |> string
-end
+html_text3

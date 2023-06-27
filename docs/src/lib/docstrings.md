@@ -1,6 +1,5 @@
 # Docstrings
 
-
 ```@meta
 CurrentModule = Harbest
 ```
@@ -9,5 +8,5 @@ CurrentModule = Harbest
 read_html
 html_elements
 html_attrs
-html_text
+html_text3
 ```
