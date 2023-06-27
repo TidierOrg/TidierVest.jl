@@ -200,10 +200,10 @@ uuid = "cd3eb016-35fb-5094-929b-558a96fad6f3"
 version = "1.9.6"
 
 [[deps.Harbest]]
-deps = ["Cascadia", "Gumbo", "HTTP"]
-git-tree-sha1 = "02d9d5c33fed1bbf94ea610743f7426fc9e005e9"
+deps = ["Cascadia", "DataFrames", "Gumbo", "HTTP"]
+git-tree-sha1 = "03382b2c76300a68e8aa3af78ecd07a53eba1556"
 uuid = "88b9f9d1-ecd7-45aa-9934-346af437630c"
-version = "0.3.0"
+version = "0.4.0"
 
 [[deps.Hiccup]]
 deps = ["MacroTools", "Test"]
