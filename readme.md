@@ -2,7 +2,7 @@
 ## Simple web scraping with Julia
 This library combines HTTP, Gumbo and Cascadia for a more simple way to scrape data. 
 
-Early version. Based on rvest from R.
+Early version. Based on [tidyverse/rvest](https://github.com/tidyverse/rvest).
 
 ## Usage
 
