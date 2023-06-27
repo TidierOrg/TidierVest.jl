@@ -1,0 +1,90 @@
+<!DOCTYPE html>
+<html lang="en"><head><meta charset="UTF-8"/><meta name="viewport" content="width=device-width, initial-scale=1.0"/><title>Home · Harbest.jl</title><script data-outdated-warner src="assets/warner.js"></script><link href="https://cdnjs.cloudflare.com/ajax/libs/lato-font/3.0.0/css/lato-font.min.css" rel="stylesheet" type="text/css"/><link href="https://cdnjs.cloudflare.com/ajax/libs/juliamono/0.045/juliamono.min.css" rel="stylesheet" type="text/css"/><link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/fontawesome.min.css" rel="stylesheet" type="text/css"/><link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/solid.min.css" rel="stylesheet" type="text/css"/><link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/brands.min.css" rel="stylesheet" type="text/css"/><link href="https://cdnjs.cloudflare.com/ajax/libs/KaTeX/0.13.24/katex.min.css" rel="stylesheet" type="text/css"/><script>documenterBaseURL="."</script><script src="https://cdnjs.cloudflare.com/ajax/libs/require.js/2.3.6/require.min.js" data-main="assets/documenter.js"></script><script src="siteinfo.js"></script><script src="../versions.js"></script><link class="docs-theme-link" rel="stylesheet" type="text/css" href="assets/themes/documenter-dark.css" data-theme-name="documenter-dark" data-theme-primary-dark/><link class="docs-theme-link" rel="stylesheet" type="text/css" href="assets/themes/documenter-light.css" data-theme-name="documenter-light" data-theme-primary/><script src="assets/themeswap.js"></script></head><body><div id="documenter"><nav class="docs-sidebar"><div class="docs-package-name"><span class="docs-autofit"><a href>Harbest.jl</a></span></div><form class="docs-search" action="search/"><input class="docs-search-query" id="documenter-search-query" name="q" type="text" placeholder="Search docs"/></form><ul class="docs-menu"><li class="is-active"><a class="tocitem" href>Home</a><ul class="internal"><li class="toplevel"><a class="tocitem" href="#Usage"><span>Usage</span></a></li><li class="toplevel"><a class="tocitem" href="#Functions"><span>Functions</span></a></li><li class="toplevel"><a class="tocitem" href="#Tutorial"><span>Tutorial</span></a></li></ul></li><li><a class="tocitem" href="lib/docstrings/">Docstrings</a></li></ul><div class="docs-version-selector field has-addons"><div class="control"><span class="docs-label button is-static is-size-7">Version</span></div><div class="docs-selector control is-expanded"><div class="select is-fullwidth is-size-7"><select id="documenter-version-selector"></select></div></div></div></nav><div class="docs-main"><header class="docs-navbar"><nav class="breadcrumb"><ul class="is-hidden-mobile"><li class="is-active"><a href>Home</a></li></ul><ul class="is-hidden-tablet"><li class="is-active"><a href>Home</a></li></ul></nav><div class="docs-right"><a class="docs-edit-link" href="https://github.com/jdiaz97/Harbest.jl/blob/main/docs/src/index.md" title="Edit on GitHub"><span class="docs-icon fab"></span><span class="docs-label is-hidden-touch">Edit on GitHub</span></a><a class="docs-settings-button fas fa-cog" id="documenter-settings-button" href="#" title="Settings"></a><a class="docs-sidebar-button fa fa-bars is-hidden-desktop" id="documenter-sidebar-button" href="#"></a></div></header><article class="content" id="documenter-page"><h1 id="Harbest.jl"><a class="docs-heading-anchor" href="#Harbest.jl">Harbest.jl</a><a id="Harbest.jl-1"></a><a class="docs-heading-anchor-permalink" href="#Harbest.jl" title="Permalink"></a></h1><p>Web Scraping is a technique to get data from the internet. In this package you can do this to get data from a static HTML.</p><p>This is a port form <a href="https://github.com/tidyverse/rvest">tidyverse/Rvest</a></p><h1 id="Usage"><a class="docs-heading-anchor" href="#Usage">Usage</a><a id="Usage-1"></a><a class="docs-heading-anchor-permalink" href="#Usage" title="Permalink"></a></h1><pre><code class="language-julia hljs">using Harbest
+
+starwars = read_html(&quot;https://rvest.tidyverse.org/articles/starwars.html&quot;)
+
+titles = html_elements(starwars, [&quot;section&quot;, &quot;h2&quot;]) |&gt; html_text3
+titles
+# 7-element Vector{String}:
+#  &quot;The Phantom Menace&quot;
+#  &quot;Attack of the Clones&quot;
+#  &quot;Revenge of the Sith&quot;
+#  ⋮
+#  &quot;Return of the Jedi&quot;
+#  &quot;The Force Awakens&quot;
+
+html = read_html(&quot;https://en.wikipedia.org/w/index.php?title=The_Lego_Movie&amp;oldid=998422565&quot;)
+table = html_elements(html, &quot;.tracklist&quot;) |&gt; html_table
+table
+# 28×4 DataFrame
+#  Row │ No.     Title                              Performer(s)                       Length 
+#      │ String  String                             String                             String 
+# ─────┼──────────────────────────────────────────────────────────────────────────────────────
+#    1 │ 1.      &quot;Everything Is Awesome&quot;            Tegan and Sara featuring The Lon…  2:43   
+#    2 │ 2.      &quot;Prologue&quot;                                                            2:28   
+#    3 │ 3.      &quot;Emmett&#39;s Morning&quot;                                                    2:00   
+#    4 │ 4.      &quot;Emmett Falls in Love&quot;                                                1:11   
+#    5 │ 5.      &quot;Escape&quot;                                                              3:26
+#   ⋮  │   ⋮                     ⋮                                  ⋮                    ⋮
+#   25 │ 25.     &quot;Everything Is Awesome&quot;            Jo Li (Joshua Bartholomew and Li…  1:26
+#   26 │ 26.     &quot;Everything Is Awesome (unplugge…  Shawn Patterson and Sammy Allen    1:24
+#   27 │ 27.     &quot;Untitled Self Portrait&quot;           Will Arnett                        1:08
+#   28 │ 28.     &quot;Everything Is Awesome (instrume…                                     2:41
+#                                                                              19 rows omitted</code></pre><h1 id="Functions"><a class="docs-heading-anchor" href="#Functions">Functions</a><a id="Functions-1"></a><a class="docs-heading-anchor-permalink" href="#Functions" title="Permalink"></a></h1><ul><li>read_html(url)</li><li>html<em>elements(html,string) or html</em>elements(html,strings)</li><li>html<em>attrs(html,string) or html</em>attrs(html)</li><li>html<em>text(html) or html</em>text2(html) or html_text3(html)</li></ul><h1 id="Tutorial"><a class="docs-heading-anchor" href="#Tutorial">Tutorial</a><a id="Tutorial-1"></a><a class="docs-heading-anchor-permalink" href="#Tutorial" title="Permalink"></a></h1><p>First, we import</p><pre><code class="language-julia hljs">using Harbest, DataFrames, PlotlyJS</code></pre><p>Then, scrape the data with <code>html_elements</code>, <code>html_attrs</code> and <code>html_text3</code></p><pre><code class="language-julia hljs">function get_scores(html)
+    score = html_elements(html,&quot;.ipl-rating-star__rating&quot;) |&gt; html_text3 ## Read scores from HTML
+    score = score[score .!= &quot;Rate&quot; .&amp;&amp; occursin.(&quot;.&quot;,score)]  ## Get actual scores
+    scores::Vector{Float64} = parse.(Float64,score)    
+    return scores
+end
+
+function get_names(html)
+    names::Vector{String} = html_elements(html,[&quot;.info&quot;,&quot;strong&quot;]) |&gt; html_text3 
+    return names
+end
+
+function get_imgs(html)
+    data = html_elements(html,[&quot;img&quot;,&quot;.zero-z-index&quot;])
+    imgs::Vector{String} = html_attrs(data,&quot;src&quot;)
+    return imgs
+end
+
+function get_n_season(html)
+    data = read_html(html)
+    data = html_elements(data,[&quot;select&quot;,&quot;option&quot;])[2] |&gt; html_text3
+    n_season::Int = parse(Int,data)
+    return n_season
+end
+
+function get_df(url)
+    df::DataFrame = DataFrame()
+    n_seasons = get_n_season(url)
+    urls = url.*&quot;episodes?season=&quot;.*string.(1:n_seasons)
+    for i in eachindex(urls)
+        html = read_html(urls[i])
+        temp_df = DataFrame(scores = get_scores(html),
+                  names = get_names(html),
+                  season = i,
+                  images = get_imgs(html))
+        df = [df;temp_df]
+    end
+    df[!,&quot;N&quot;]= rownumber.(eachrow(df))
+    return df
+end
+
+function plot_df(df,title)
+    return plot(df,
+                x = :N,
+                y = :scores,
+                text = :names,
+                color = :season, 
+                mode = &quot;lines&quot;,
+                labels=Dict(
+                    :N =&gt; &quot;Episode number&quot;,
+                    :scores =&gt; &quot;Score&quot;,
+                    :season =&gt; &quot;Season&quot;
+                ),
+                Layout(title = title* &quot; score on IMDb&quot;)
+                )
+end</code></pre><pre><code class="language-julia hljs">community_df = get_df(&quot;https://www.imdb.com/title/tt1439629/&quot;)
+plot_df(community_df,&quot;Community&quot;)</code></pre><iframe src="plot_community.html" style="height:500px;width:100%;"></iframe><pre><code class="language-julia hljs">bojack_df = get_df(&quot;https://www.imdb.com/title/tt3398228/&quot;)
+plot_df(bojack_df,&quot;Bojack Horseman&quot;)</code></pre><iframe src="plot_bojack.html" style="height:500px;width:100%;"></iframe></article><nav class="docs-footer"><a class="docs-footer-nextpage" href="lib/docstrings/">Docstrings »</a><div class="flexbox-break"></div><p class="footer-message">Powered by <a href="https://github.com/JuliaDocs/Documenter.jl">Documenter.jl</a> and the <a href="https://julialang.org/">Julia Programming Language</a>.</p></nav></div><div class="modal" id="documenter-settings"><div class="modal-background"></div><div class="modal-card"><header class="modal-card-head"><p class="modal-card-title">Settings</p><button class="delete"></button></header><section class="modal-card-body"><p><label class="label">Theme</label><div class="select"><select id="documenter-themepicker"><option value="documenter-light">documenter-light</option><option value="documenter-dark">documenter-dark</option></select></div></p><hr/><p>This document was generated with <a href="https://github.com/JuliaDocs/Documenter.jl">Documenter.jl</a> version 0.27.24 on <span class="colophon-date" title="Tuesday 27 June 2023 14:18">Tuesday 27 June 2023</span>. Using Julia version 1.9.1.</p></section><footer class="modal-card-foot"></footer></div></div></div></body></html>
