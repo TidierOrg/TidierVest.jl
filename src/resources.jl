@@ -1,9 +1,20 @@
 include("html_text.jl")
+include("html_table.jl")
 
 """
 Returns a parsed HTML from an url
+
+read_html(url::String)
+
+### Input: 
+
+- `url::String`
+
+### Output
+
+HTMLDocument
 """
-function read_html(url::String)
+function read_html(url::String)::HTMLDocument
     r = HTTP.get(url)
     return parsehtml(String(r.body))
 end
@@ -11,6 +22,17 @@ end
 
 """
 Returns HTML elements
+
+html_elements(html,string)
+
+### Input: 
+
+- `html` -- It can be HTMLDocument, HTMLElement or Vector{HTMLNode}
+- `string` -- It's the element in the HTML that you want to find. It can be a String or Vector{String}, if the latter, it will apply the function in sequence
+
+### Output
+
+Your HTML reduced to the element that you indicated
 """
 function html_elements(html::HTMLDocument,string::String)
     elements = eachmatch(Selector(string),html.root)
@@ -52,7 +74,18 @@ function html_elements(html::Vector{HTMLNode},strings::Vector{String})
 end
 
 """
-Get an attribute. If string not provided, it will try to return some key
+Get an attribute
+
+html_attrs(html,string)
+
+### Input: 
+
+- `html` -- It can be HTMLDocument, HTMLElement or Vector{HTMLNode}
+- `string::String` (optional) -- Define the attribute that you want to return, if not provided, it would try to return a list of the attributes.
+
+### Output
+
+Indicated attribute or a list of the available attributes
 """
 function html_attrs(html::HTMLDocument)
     return attrs(html.root)
