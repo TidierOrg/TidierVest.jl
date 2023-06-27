@@ -1,5 +1,10 @@
 # Harbest.jl
 ## Simple web scraping with Julia
+
+[![d_stable](https://img.shields.io/badge/Doc-stable-green?style=flat-square)](https://jdiaz97.github.io/Harbest.jl/stable/)
+![version](https://img.shields.io/github/v/tag/jdiaz97/Harbest.jl?sort=semver&style=flat-square)
+
+
 This library combines HTTP, Gumbo and Cascadia for a more simple way to scrape data. 
 
 Early version. Based on [tidyverse/rvest](https://github.com/tidyverse/rvest).
