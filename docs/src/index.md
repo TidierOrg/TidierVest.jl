@@ -1,4 +1,4 @@
-# Harbest.jl
+# TidierVest.jl
 
 Web Scraping is a technique to get data from the internet. In this package you can do this to get data from a static HTML.
 
@@ -7,7 +7,7 @@ This is a port form [tidyverse/Rvest](https://github.com/tidyverse/rvest)
 # Usage
 
 ```julia
-using Harbest
+using TidierVest
 
 starwars = read_html("https://rvest.tidyverse.org/articles/starwars.html")
 
@@ -54,7 +54,7 @@ table
 First, we import
 
 ```julia
-using Harbest, DataFrames, PlotlyJS
+using TidierVest, DataFrames, PlotlyJS
 ```
 
 Then, scrape the data with `html_elements`, `html_attrs` and `html_text3`

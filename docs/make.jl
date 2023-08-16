@@ -1,7 +1,7 @@
 using Documenter, Harbest
 
 makedocs(
-    sitename = "Harbest.jl",
+    sitename = "TidierVest.jl",
     authors = "José Díaz",
     modules = [Harbest],
     doctest = true,
@@ -12,6 +12,6 @@ makedocs(
 )
  
 deploydocs(
-    repo = "https://github.com/jdiaz97/Harbest.jl.git",
+    repo = "https://github.com/TidierOrg/TidierVest.jl.git",
     push_preview = true
 )

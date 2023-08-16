@@ -1,12 +1,12 @@
 # Docstrings
 
 ```@meta
-CurrentModule = Harbest
+CurrentModule = TidierVest
 DocTestSetup = quote
-    using Harbest
+    using TidierVest
 end
 ```
 
 ```@autodocs
-Modules = [Harbest]
+Modules = [TidierVest]
 ```

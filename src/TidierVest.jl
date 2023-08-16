@@ -1,4 +1,4 @@
-module Harbest
+module TidierVest
 
 using HTTP, Cascadia, Gumbo, DataFrames
 
