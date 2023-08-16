@@ -8,12 +8,6 @@ This library combines HTTP, Gumbo and Cascadia for a more simple way to scrape d
 
 Based on [tidyverse/rvest](https://github.com/tidyverse/rvest).
 
-## Use TidierVest instead
-
-The package and the maintenance will be moved to [TidierOrg/TidierVest.jl](https://github.com/TidierOrg/TidierVest.jl)
-
-TidierOrg provides a tidyverse for Julia
-
 ## Usage
 
 ```julia
