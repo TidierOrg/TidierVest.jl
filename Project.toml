@@ -1,4 +1,4 @@
-name = "TidierVest.jl"
+name = "TidierVest"
 uuid = "969b988e-7aed-4820-b60d-bdec252047c4"
 authors = ["jdiaz97 <jose@boquila.org>"]
 version = "0.4.2"
