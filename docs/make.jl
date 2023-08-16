@@ -3,6 +3,8 @@ using Documenter, Harbest
 makedocs(
     sitename = "Harbest.jl",
     authors = "José Díaz",
+    modules = [Harbest],
+    doctest = true,
     pages = [
         "Home" => "index.md",
         "Docstrings" => "lib/docstrings.md"
