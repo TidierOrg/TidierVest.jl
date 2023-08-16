@@ -1,8 +1,8 @@
 # TidierVest.jl
 ## Simple web scraping with Julia
 
-[![d_stable](https://img.shields.io/badge/Doc-stable-green?style=flat-square)](https://jdiaz97.github.io/TidierVest.jl/stable/)
-![version](https://img.shields.io/github/v/tag/jdiaz97/TidierVest.jl?sort=semver&style=flat-square)
+[![d_stable](https://img.shields.io/badge/Doc-stable-green?style=flat-square)](https://tidierorg.github.io/TidierVest.jl/stable/)
+![version](https://img.shields.io/github/v/tag/tidierorg/TidierVest.jl?sort=semver&style=flat-square)
 
 This library combines HTTP, Gumbo and Cascadia for a more simple way to scrape data. 
 

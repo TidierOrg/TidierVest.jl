@@ -1,6 +1,6 @@
-include("../src/Harbest.jl")
+include("../src/TidierVest.jl")
 
-using .Harbest
+using .TidierVest
 
 starwars = read_html("https://rvest.tidyverse.org/articles/starwars.html")
 
