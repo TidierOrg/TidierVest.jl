@@ -1,6 +1,8 @@
 # TidierVest.jl
 ## Simple web scraping with Julia
 
+<img src="/docs/src/assets/TidierVest_logo.png" align="right" style="padding-left:10px;" width="150"/>
+
 [![d_stable](https://img.shields.io/badge/Doc-stable-green?style=flat-square)](https://tidierorg.github.io/TidierVest.jl/stable/)
 ![version](https://img.shields.io/github/v/tag/tidierorg/TidierVest.jl?sort=semver&style=flat-square)
 
