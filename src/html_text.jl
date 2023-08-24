@@ -23,9 +23,13 @@ function html_text3(html::HTMLElement)
     return replace(text, '\n' => "")
 end
 
+function html_text3(html::HTMLText)
+    text = html.text
+    return replace(text, '\n' => "")
+end
+
 function html_text3(html::Vector{HTMLNode})
-    text = nodeText.(html)
-    return replace.(text, '\n' => "")
+    return html_text3.(html)
 end
 
 function get_text(htmlstring)
@@ -141,4 +145,3 @@ function html_text2(html::HTMLElement)
     text = cleantext(text)
     return text
 end
-html_text3

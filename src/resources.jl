@@ -111,5 +111,25 @@ function html_attrs(html::HTMLElement,string::String)
     return getattr(html,string)
 end
 
+"""
+Get the children of an html
 
+### Input: 
 
+- `html` -- It can be HTMLDocument, HTMLElement or Vector{HTMLNode}
+
+### Output
+
+Indicated attribute or a list of the available attributes
+"""
+function html_children(html::HTMLDocument)
+    return html.root.children
+end
+
+function html_children(html::HTMLElement)
+    return html.children
+end
+
+function html_children(html::Vector{HTMLNode})
+    return reduce(vcat,html_children.(html))
+end

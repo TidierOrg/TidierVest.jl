@@ -1,4 +1,4 @@
-using Harbest, DataFrames, PlotlyJS
+using TidierVest, DataFrames, PlotlyJS
 
 function get_scores(html)
     score = html_elements(html,".ipl-rating-star__rating") |> html_text3 ## Read scores from HTML

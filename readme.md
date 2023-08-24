@@ -67,6 +67,10 @@ Get the content of an attribute, if string not provided it would try to get you 
 
 Create a DataFrame from an HTML Table node
 
+### `html_children`
+
+Return the children of an html
+
 ## Notes
 
 - I'm actively accepting suggestions
