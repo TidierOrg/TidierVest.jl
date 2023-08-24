@@ -1,9 +1,9 @@
-using Documenter, Harbest
+using Documenter, TidierVest
 
 makedocs(
     sitename = "TidierVest.jl",
     authors = "José Díaz",
-    modules = [Harbest],
+    modules = [TidierVest],
     doctest = true,
     pages = [
         "Home" => "index.md",

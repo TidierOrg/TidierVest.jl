@@ -1,8 +1,8 @@
 # This file is machine-generated - editing it directly is not advised
 
-julia_version = "1.9.0"
+julia_version = "1.9.2"
 manifest_format = "2.0"
-project_hash = "2c69ba8ea341e69a6da055b9135ac8b875e925ee"
+project_hash = "636c1b71d34dbe22cf234cf6eeaa012ad6247fd6"
 
 [[deps.ANSIColoredPrinters]]
 git-tree-sha1 = "574baf8110975760d391c710b6341da1afa48d8c"
@@ -90,7 +90,7 @@ weakdeps = ["Dates", "LinearAlgebra"]
 [[deps.CompilerSupportLibraries_jll]]
 deps = ["Artifacts", "Libdl"]
 uuid = "e66e0078-7015-5450-92f7-15fbd957f2ae"
-version = "1.0.2+0"
+version = "1.0.5+0"
 
 [[deps.ConcurrentUtilities]]
 deps = ["Serialization", "Sockets"]
@@ -198,12 +198,6 @@ deps = ["Base64", "CodecZlib", "ConcurrentUtilities", "Dates", "Logging", "Loggi
 git-tree-sha1 = "5e77dbf117412d4f164a464d610ee6050cc75272"
 uuid = "cd3eb016-35fb-5094-929b-558a96fad6f3"
 version = "1.9.6"
-
-[[deps.Harbest]]
-deps = ["Cascadia", "DataFrames", "Gumbo", "HTTP"]
-git-tree-sha1 = "03382b2c76300a68e8aa3af78ecd07a53eba1556"
-uuid = "88b9f9d1-ecd7-45aa-9934-346af437630c"
-version = "0.4.0"
 
 [[deps.Hiccup]]
 deps = ["MacroTools", "Test"]
@@ -437,7 +431,7 @@ version = "1.3.0"
 [[deps.Pkg]]
 deps = ["Artifacts", "Dates", "Downloads", "FileWatching", "LibGit2", "Libdl", "Logging", "Markdown", "Printf", "REPL", "Random", "SHA", "Serialization", "TOML", "Tar", "UUIDs", "p7zip_jll"]
 uuid = "44cfe95a-1eb2-52ea-b672-e2afdf69b78f"
-version = "1.9.0"
+version = "1.9.2"
 
 [[deps.PlotlyBase]]
 deps = ["ColorSchemes", "Dates", "DelimitedFiles", "DocStringExtensions", "JSON", "LaTeXStrings", "Logging", "Parameters", "Pkg", "REPL", "Requires", "Statistics", "UUIDs"]
@@ -594,6 +588,14 @@ version = "0.1.1"
 deps = ["InteractiveUtils", "Logging", "Random", "Serialization"]
 uuid = "8dfed614-e22c-5e08-85e1-65c5234f0b40"
 
+[[deps.TidierVest]]
+deps = ["Cascadia", "DataFrames", "Gumbo", "HTTP"]
+git-tree-sha1 = "4d667ba40965ea1716cc4213ec2d60005597500c"
+repo-rev = "main"
+repo-url = "https://github.com/TidierOrg/TidierVest.jl"
+uuid = "969b988e-7aed-4820-b60d-bdec252047c4"
+version = "0.4.3"
+
 [[deps.TranscodingStreams]]
 deps = ["Random", "Test"]
 git-tree-sha1 = "9a6ae7ed916312b41236fcef7e0af564ef934769"
@@ -643,7 +645,7 @@ version = "1.2.13+0"
 [[deps.libblastrampoline_jll]]
 deps = ["Artifacts", "Libdl"]
 uuid = "8e850b90-86db-534c-a0d3-1478176c7d93"
-version = "5.7.0+0"
+version = "5.8.0+0"
 
 [[deps.nghttp2_jll]]
 deps = ["Artifacts", "Libdl"]
