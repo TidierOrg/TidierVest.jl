@@ -20,7 +20,7 @@ html_table(table_html)
 
 A DataFrame
 """
-function html_table(table_html::Vector{HTMLNode})::DataFrame
+function html_table(table_html::Union{Vector{HTMLNode}, HTMLElement{:table}})::DataFrame
     rows = html_elements(table_html, "tr")
     t = parse_rows.(rows)
     t = t[length.(t) .== length(t[1])]
