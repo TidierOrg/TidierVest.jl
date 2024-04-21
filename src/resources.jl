@@ -10,6 +10,10 @@ read_html(url::String)
 
 - `url::String`
 
+o
+
+- `file::IOStream`r 
+
 ### Output
 
 HTMLDocument
@@ -19,6 +23,9 @@ function read_html(url::String)::HTMLDocument
     return parsehtml(String(r.body))
 end
 
+function read_html(file::IOStream)::HTMLDocument
+    return parsehtml(read(file,String))
+end
 
 """
 Returns HTML elements
