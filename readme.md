@@ -73,6 +73,10 @@ Create a DataFrame from an HTML Table node
 
 Return the children of an html
 
+### `minimal_html`
+
+Create an html document with inline html
+
 ## Notes
 
 - I'm actively accepting suggestions
