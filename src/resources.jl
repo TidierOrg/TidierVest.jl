@@ -2,15 +2,31 @@ include("html_text.jl")
 include("html_table.jl")
 
 """
-Returns a parsed HTML from an url
+Returns a parsed HTML from a string
+
+parse_html(str::String)::HTMLDocument
+
+### Input: 
+
+- `str::String`
+
+### Output
+
+HTMLDocument
+"""
+parse_html(str::String)::HTMLDocument = Gumbo.parsehtml(str)
+
+"""
+Returns a parsed HTML from an URL string
 
 read_html(url::String)
+read_html(file::IOStream)
 
 ### Input: 
 
 - `url::String`
 
-o
+or
 
 - `file::IOStream`r 
 
