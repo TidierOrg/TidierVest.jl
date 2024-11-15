@@ -53,6 +53,10 @@ table
 
 Read an url
 
+### `parse_html`
+
+Parses a string into an HTML Document type
+
 ### `html_elements`
 
 Get the elements you want from an html
