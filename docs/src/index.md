@@ -48,6 +48,7 @@ table
 - html_attrs(html,string) or html_attrs(html)
 - html_text(html) or html_text2(html) or html_text3(html)
 - html_table(html)
+- parse_html(string)
 
 # Tutorial
 
