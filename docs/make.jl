@@ -12,6 +12,6 @@ makedocs(
 )
  
 deploydocs(
-    repo = "https://github.com/TidierOrg/TidierVest.jl.git",
+    repo = "github.com/TidierOrg/TidierVest.jl.git",
     push_preview = true
 )
