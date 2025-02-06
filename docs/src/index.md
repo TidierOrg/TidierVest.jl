@@ -43,12 +43,13 @@ table
 
 # Functions
 
-- read_html(url)
-- html_elements(html,string) or html_elements(html,strings)
-- html_attrs(html,string) or html_attrs(html)
+- read_html(url::String)
+- html_elements(html,string::String) or html_elements(html,strings::Vector{String})
+- html_attrs(html,string::String) or html_attrs(html)
 - html_text(html) or html_text2(html) or html_text3(html)
 - html_table(html)
-- parse_html(string)
+- parse_html(string::String)
+- minimal_html(html::AbstractString,title::AbstractString)
 
 # Tutorial
 
