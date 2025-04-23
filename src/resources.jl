@@ -69,7 +69,11 @@ end
 
 function html_elements(html::Vector{HTMLNode},string::String)
     elements = eachmatch.([Selector(string)],html)
-    return reduce(vcat,elements) ## will solve the Vector of Vectors problem
+    if isempty(elements)
+        return elements
+    else         
+        return reduce(vcat,elements) ## will solve the Vector of Vectors problem
+    end
 end
 
 function html_elements(html::HTMLDocument,strings::Vector{String})
